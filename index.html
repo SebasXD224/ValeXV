@@ -65,7 +65,7 @@
             
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="./images/foto1.jpg" alt="Los Angeles" class="d-block" >
+                <img src="./images/galeria1.JPG" class="d-block" >
                 <style>
                     .d-block{
                         width: 100%;
@@ -74,11 +74,15 @@
                 </style>
             </div>
             <div class="carousel-item">
-                <img src="./images/foto1.jpg" alt="Chicago" class="d-block" >
+                <img src="./images/galeria2.JPG" class="d-block" >
                 
             </div>
             <div class="carousel-item">
-                <img src="./images/foto1.jpg" alt="New York" class="d-block" >
+                <img src="./images/galeria3.JPG" class="d-block" >
+                
+            </div>
+            <div class="carousel-item">
+                <img src="./images/galeria4.JPG" class="d-block" >
                 
             </div>
             </div>
@@ -149,19 +153,19 @@
             <div class="container">
                 <h2>Asistencia</h2>
                 <p>Agradezco de tu cooperación para poder asi llevar a cabo el conteo de asistencias a la perfección.</p>
-                <form class="formulario">
+                <form class="formulario" id="formulario" onsubmit="enviarDatos(event)">
                     <div class="form-nombre dato">
                         <label>Nombre: </label>
-                        <input type="text" placeholder="Escriba su Nombre" id="name" name="name" required>
+                        <input type="text" placeholder="Escriba su Nombre Completo" id="name" name="name" required minlength="10">
                     </div>
                     <div class="form-tel dato">
                         <label>Telefono: </label>
-                        <input type="tel" placeholder="WhatsApp" id="tel" name="tel" required>
+                        <input type="tel" placeholder="WhatsApp" id="tel" name="tel" required minlength="8">
                     </div>
                     <div class="form-respuesta dato">
                         <label>Respuesta</label>
                         <div class="radio-dato">
-                            <input type="radio" id="si" value="si" name="respuesta">
+                            <input type="radio" id="si" value="si" name="respuesta" checked>
                             <label>¡Claro! Ahi Estare</label>
                         </div>
                         <div class="radio-dato">
@@ -169,7 +173,7 @@
                             <label>Lo siento, no podre asistir</label>
                         </div>
                     </div>
-                    <button>
+                    <button id="boton" type="submit">
                         <img src="images/whatsapp.png" class="img-whatsapp">
                         Enviar a Whatsapp
                     </button>
@@ -177,5 +181,6 @@
             </div>
         </section>
     </div>
+    <script src="scripts/mandarDatos.js"></script>
 </body>
 </html>
